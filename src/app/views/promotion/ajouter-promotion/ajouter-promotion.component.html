@@ -1,0 +1,50 @@
+<div class="animated fadeIn">
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          Ajouter  <strong>nouveau </strong>Produit
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()" [formGroup]="addPromoForm">
+
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="nom">Nom De la Promotion</label>
+              <div class="col-md-9">
+                <input type="text" id="nom" name="nom" formControlName="nom" class="form-control" placeholder="nom">
+
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="description">Description Du Produit</label>
+              <div class="col-md-9">
+                <input type="text" id="description" name="description" formControlName="description" class="form-control" placeholder="description">
+
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="description">Description Du Produit</label>
+              <div class="col-md-9">
+                <select name="select" class="form-control form-control-primary" formControlName="idProduit" name="idProduit">
+                  <option *ngFor="let product of products" value="{{product.id}}"> {{product.nom}}</option>
+
+                </select>
+              </div>
+            </div>
+
+
+            <div class="card-footer">
+              <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+              <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div><!--/.row-->
+</div>

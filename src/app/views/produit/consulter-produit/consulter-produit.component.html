@@ -1,0 +1,25 @@
+<div class="animated fadeIn">
+
+
+  <div class="row">
+
+    <div class="col-sm-6 col-md-4">
+      <div class="card card-accent-warning">
+        <div class="card-header">
+          {{produit.nom}}
+        </div>
+        <div class="card-body">
+          {{produit.description}}
+          {{produit.quantite}}
+          {{produit.emballage}}
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-sm btn-info" (click)="modifier(produit.id)">Modifier</button>
+          <button class="btn btn-sm btn-danger" (click)="delete(produit.id)">Supprimer</button>
+        </div>
+      </div>
+    </div><!--/.col-->
+
+  </div><!--/.row-->
+
+</div>

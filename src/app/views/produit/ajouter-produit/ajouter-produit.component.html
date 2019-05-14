@@ -1,0 +1,63 @@
+<div class="animated fadeIn">
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          Ajouter  <strong>Nouveaux </strong>Produits
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()" [formGroup]="addProductForm">
+
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="nom">Nom du Produit</label>
+              <div class="col-md-9">
+                <input type="text" id="nom" name="nom" formControlName="nom" class="form-control" placeholder="nom">
+
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="description">Description du Produit</label>
+              <div class="col-md-9">
+                <input type="text" id="description" name="nom" formControlName="description" class="form-control" placeholder="description">
+
+              </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="Emballage">Emballage du Produit</label>
+                <div class="col-md-9">
+                  <select id="emballage"  class="form-control"  formControlName="emballage" name="emballage">
+                  <option selected=""></option>
+                  <option>BIDON (1L) C12</option>
+                  <option>BIDON (2L) C28</option>
+                  <option>BIDON (4L*4) C44</option>
+                  <option>BIDON (4L*6) C4</option>
+                  <option>BIDON (5L*3) C5</option>
+                  <option>BIDON (5L*4) C54</option>
+                  <option>ESTAGNON (17kg)</option>
+                  <option>FUT (180 kg)</option>
+                  </select>
+                </div>
+              </div>
+
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="quantite">Quantité du Produit</label>
+              <div class="col-md-9">
+                <input type="number" id="quantite" name="text-input" formControlName="quantite" class="form-control" placeholder="Quantité > 0">
+
+              </div>
+            </div>
+            <input name="file" id="imgUrl" formControlName="imgUrl" type="file" (change)="onFileChange($event)"  /><br><br>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i>Valider</button>
+              <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i>Réinitialiser</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div><!--/.row-->
+</div>
